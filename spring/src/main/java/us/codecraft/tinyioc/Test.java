@@ -13,12 +13,13 @@ public class Test {
 		AutowireCapableBeanFactory beanfactory = new AutowireCapableBeanFactory();
 		BeanDefinition beanDefinition = new BeanDefinition();
 		beanDefinition.setBeanClassName("us.codecraft.tinyioc.HelloSpring");
-		beanfactory.registerBeanDefinition("hello",beanDefinition);
-		
-		
 		PropertyValues propertyValues = new PropertyValues();
 		propertyValues.addPropertyValue(new PropertyValue("name","zzy"));
 		beanDefinition.setPropertyValues(propertyValues);
+		beanfactory.registerBeanDefinition("hello",beanDefinition);
+		
+		
+		
 		
 		HelloSpring hello = (HelloSpring)beanfactory.getBean("hello");
 		hello.println();

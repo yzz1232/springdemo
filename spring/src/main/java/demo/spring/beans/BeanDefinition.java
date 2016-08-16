@@ -1,5 +1,7 @@
 package demo.spring.beans;
 
+import java.util.List;
+
 public class BeanDefinition {
 	
 	public BeanDefinition(){}
@@ -9,6 +11,18 @@ public class BeanDefinition {
 	private Class beanClass;
 	
 	private Object bean;
+	
+	private PropertyValues propertyValues;
+
+	
+
+	public PropertyValues getPropertyValues() {
+		return propertyValues;
+	}
+
+	public void setPropertyValues(PropertyValues propertyValues) {
+		this.propertyValues = propertyValues;
+	}
 
 	public String getBeanName() {
 		return beanName;
