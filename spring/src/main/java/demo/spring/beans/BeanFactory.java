@@ -1,5 +1,8 @@
 package demo.spring.beans;
 
+
+public interface BeanFactory {
+
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.Map;
@@ -8,9 +11,13 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class BeanFactory {
 	public BeanFactory(){}
+
 	
-	Map<String,BeanDefinition> map = new ConcurrentHashMap<String, BeanDefinition>();
+	Object getBean(String name) throws Exception;
 	
+
+	void registerBeanDefinition(String name,BeanDefinintion bean);
+
 	
 	public void registerBeanDefinition(String name,BeanDefinition bean){
 		map.put(name,bean);
@@ -31,5 +38,6 @@ public class BeanFactory {
 			declareField.set(bean,propertyValue.getValue());
 		}
 	}
+>>>>>>> branch 'master' of git@github.com:zhuzhenyu1994/springdemo.git
 }
 

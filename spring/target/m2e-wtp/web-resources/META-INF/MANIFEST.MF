@@ -1,5 +1,9 @@
 Manifest-Version: 1.0
 Build-Jdk: 1.7.0_79
+<<<<<<< HEAD
+Built-By: Administrator
+=======
 Built-By: zzy
+>>>>>>> branch 'master' of git@github.com:zhuzhenyu1994/springdemo.git
 Created-By: Maven Integration for Eclipse
 
