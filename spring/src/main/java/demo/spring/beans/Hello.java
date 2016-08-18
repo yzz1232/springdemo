@@ -1,11 +1,11 @@
 package demo.spring.beans;
 
 public class Hello {
-	public void print(){
-		System.out.println("hello");
-	}
+	private String name;
 	
-	public static void main(String[] args) {
-		System.out.println("123");
+	public void hello(){
+		System.out.println(name);
 	}
+
+	
 }
